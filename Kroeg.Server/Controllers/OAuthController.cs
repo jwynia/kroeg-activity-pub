@@ -90,7 +90,7 @@ namespace Kroeg.Server.Controllers
 
       if (User == null || User.FindFirstValue(ClaimTypes.NameIdentifier) == null)
       {
-        return RedirectToAction("Login", new { redirect = Request.Path.Value + Request.QueryString });
+        return RedirectToAction("Login","Auth", new { redirect = Request.Path.Value + Request.QueryString });
       }
 
       var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -131,7 +131,7 @@ namespace Kroeg.Server.Controllers
       model.Actor = actor;
       if (!hasAccess || !ModelState.IsValid)
       {
-        return View("ChooseActorOAuth", model);
+        return View("ChooseActor", model);
       }
       var exp = TimeSpan.FromSeconds(model.Expiry);
       if (exp > _tokenSettings.ExpiryTime)

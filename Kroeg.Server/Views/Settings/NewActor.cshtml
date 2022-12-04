@@ -1,6 +1,8 @@
 ﻿@model Kroeg.Server.Controllers.SettingsController.NewActorModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+@{
+    Layout = "_Layout";
+}
 @section Menu {
     @await Html.PartialAsync("Menu", Model.Menu)
 }
