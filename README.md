@@ -1,4 +1,4 @@
-# Kroeg
+t# Kroeg
 > Noun (plural **kroegen**, diminutive **kroegje**) - (informal) a pub.
 
 A reference implementation for [ActivityPub](http://www.w3.org/TR/activitypub/).
@@ -10,5 +10,5 @@ See [Kroeg.Server's README](Kroeg.Server/README.md) for more information.
 ## License
 Kroeg is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
 
-## Contact
-For questions etc, I have set up an IRC channel at Freenode: `#kroeg`.
+## JWynia Notes
+Hard-coded a few package versions to get it to compile. Not sure whether this is going to be just so it can be easily referred to or if it's worth pulling it forward to 6.0LTS or 7.0 versions and get it actually running. It looks like there are still problems with the views, but it does build on my Mac with these package versions.
